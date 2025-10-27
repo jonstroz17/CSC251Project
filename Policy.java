@@ -14,6 +14,9 @@ public class Policy
    constructors
    */
    
+   /**
+      The Policy method is the no-arg constructor of the class.
+   */
    public Policy()
    {
       policyNum = 0;
@@ -25,8 +28,18 @@ public class Policy
       height = 0.0;
       weight = 0.0;
    }
-   //no-arg constructor
    
+   /**
+      The Policy method is the arg-constructor of the class.
+      @param num The policy number.
+      @param name The policy provider's name.
+      @param first The policy holder's first name.
+      @param last The policy holder's last name.
+      @param polAge The policy holder's age.
+      @param polSmoke The policy holder's smoking status.
+      @param polHeight The policy holder's height.
+      @param polWeight The policy holder's weight.
+   */
    public Policy(int num, String name, String first, String last, int polAge, String polSmoke, double polHeight, double polWeight)
    {
       policyNum = num;
@@ -38,116 +51,159 @@ public class Policy
       height = polHeight;
       weight = polWeight;
    }
-   //arg constructor
    
    /**
    mutators
    */
    
+   /**
+      The setPolicyNum method is the policy number mutator method.
+      @param num The new policy number.
+   */
    public void setPolicyNum(int num)
    {
       policyNum = num;
    }
-   //policy number mutator
    
+   /**
+      The setProviderName method is the provider name mutator method.
+      @param name The new provider name.
+   */
    public void setProviderName(String name)
    {
       providerName = name;
    }
-   //provider name mutator
    
+   /**
+      The setFirstName method is the policy holder first name mutator method.
+      @param first The new policy holder first name.
+   */
    public void setFirstName(String first)
    {
       nameFirst = first;
    }
-   //first name mutator
    
+   /**
+      The setLastName method is the policy holder last name mutator method.
+      @param last The new policy holder last name.
+   */
    public void setLastName(String last)
    {
       nameLast = last;
    }
-   //last name mutator
    
+   /**
+      The setAge method is the policy holder age mutator method.
+      @param polAge The new policy holder age.
+   */
    public void setAge(int polAge)
    {
       age = polAge;
    }
-   //age mutator
    
+   /**
+      The setSmokingStatus method is the policy holder smoking status mutator method.
+      @param polSmoke The new policy holder smoking status.
+   */
    public void setSmokingStatus(String polSmoke)
    {
       smoker = polSmoke;
    }
-   //smoking status mutator
    
+   /**
+      The setHeight method is the policy holder height mutator method.
+      @param polHeight The new policy holder height.
+   */
    public void setHeight(double polHeight)
    {
       height = polHeight;
    }
-   //height mutator
    
+   /**
+      The setWeight method is the policy holder weight mutator method.
+      @param polWeight The new policy holder weight.
+   */
    public void setWeight(double polWeight)
    {
       weight = polWeight;
    }
-   //weight mutator
    
    /**
    accessors
    */
    
+   /**
+      The getPolicyNum method is the policy number accessor method.
+   */
    public int getPolicyNum()
    {
       return policyNum;
    }
-   //policy number accessor
    
+   /**
+      The getProviderName method is the provider name accessor method.
+   */
    public String getProviderName()
    {
       return providerName;
    }
-   //policy number accessor
    
+   /**
+      The getFirstName method is the policy holder first name accessor method.
+   */
    public String getFirstName()
    {
       return nameFirst;
    }
-   //first name accessor
    
+   /**
+      The getLastName method is the policy holder last name accessor method.
+   */
    public String getLastName()
    {
       return nameLast;
    }
-   //last name accessor
    
+   /**
+      The getAge method is the policy holder age accessor method.
+   */
    public int getAge()
    {
       return age;
    }
-   //age accessor
    
+   /**
+      The getSmokingStatus method is the policy holder smoking status accessor method.
+   */
    public String getSmokingStatus()
    {
       return smoker;
    }
-   //smoking status accessor
    
+   /**
+      The getHeight method is the policy holder height accessor method.
+   */
    public double getHeight()
    {
       return height;
    }
-   //height accessor
    
+   /**
+      The getWeight method is the policy holder weight accessor method.
+   */
    public double getWeight()
    {
       return weight;
    }
-   //weight accessor
    
    /**
    additional methods
    */
    
+   /**
+      The calculateBMI method calculates the policy holder's BMI.
+      @return The BMI of the policy holder.
+   */
    public double calculateBMI()
    {
       double bmi;
@@ -156,8 +212,11 @@ public class Policy
       
       return bmi;
    }
-   //calculates BMI of policyholder
    
+   /**
+      The calculateInsurancePrice method calculates the price of the policy holder's insurance policy.
+      @return The total price of the policy holder's insurance policy.
+   */
    public double calculateInsurancePrice()
    {
       final double BASE_FEE = 600.0;
@@ -191,5 +250,4 @@ public class Policy
       
       return price;
    }
-   //calculates price of insurance policy
 }
