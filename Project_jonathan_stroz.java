@@ -22,6 +22,9 @@ public class Project_jonathan_stroz
       String smoker;
       //user-defined variables
       
+      int noSmoke = 0, yesSmoke = 0;
+      //non-user-defined variables
+      
       do
       {
          policyNum = fileRead.nextInt();
@@ -59,5 +62,36 @@ public class Project_jonathan_stroz
       
       fileRead.close();
       //file that was being read is closed
+      
+      for(int i = 0; i < policies.size(); i++)
+      {
+         System.out.print("\nPolicy Number: " + policies.get(i).getPolicyNum());
+         System.out.print("\nProvider Name: " + policies.get(i).getProviderName());
+         System.out.print("\nPolicyholder's First Name: " + policies.get(i).getFirstName());
+         System.out.print("\nPolicyholder's Last Name: " + policies.get(i).getLastName());
+         System.out.print("\nPolicyholder's Age: " + policies.get(i).getAge());
+         System.out.print("\nPolicyholder's Smoking Status: " + policies.get(i).getSmokingStatus());
+         System.out.print("\nPolicyholder's Height: " + policies.get(i).getHeight() + " inches");
+         System.out.print("\nPolicyholder's Weight: " + policies.get(i).getWeight() + " pounds");
+         System.out.printf("\nPolicyholder's BMI: %.2f", policies.get(i).calculateBMI());
+         System.out.printf("\nPolicy Price: $%.2f", policies.get(i).calculateInsurancePrice());
+         System.out.print("\n");
+         //policy information is displayed
+         
+         if(policies.get(i).getSmokingStatus().equals("smoker"))
+         {
+            yesSmoke++;
+         }
+         else
+         {
+            noSmoke++;
+         }
+         //smoking status added to running tallies
+      }
+      //policy information for all policies is displayed
+      
+      System.out.print("\nThe number of policies with a smoker is: " + yesSmoke);
+      System.out.print("\nThe number of policies with a non-smoker is: " + noSmoke);
+      //total numbers of smokers and non-smokers is displayed
    }
 }
